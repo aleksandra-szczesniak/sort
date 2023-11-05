@@ -58,7 +58,7 @@ def sort(folder_path):
 
                     shutil.move(file_path, new_path)
 
-            if not found and file_extension in extensions['archives']:
+            if found and file_extension in extensions['archives']:
                 archive_folder = os.path.join(folder_path, 'archives')
                 new_name = normalize(os.path.splitext(file)[0])
                 new_folder_path = os.path.join(archive_folder, new_name)
